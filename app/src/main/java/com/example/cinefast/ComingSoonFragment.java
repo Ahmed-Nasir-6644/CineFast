@@ -25,9 +25,9 @@ public class ComingSoonFragment extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
         List<Movie> movies = new ArrayList<>();
-        movies.add(new Movie("Dune: Part Two", R.drawable.dnk, "Sci-Fi", "166 min", "https://www.youtube.com/watch?v=Way9Dexny3w", false));
-        movies.add(new Movie("Deadpool & Wolverine", R.drawable.ic, "Action", "127 min", "https://www.youtube.com/watch?v=73_1biulkYk", false));
-        movies.add(new Movie("Joker: Folie à Deux", R.drawable.is, "Drama", "138 min", "https://www.youtube.com/watch?v=_OKAwz2MsJs", false));
+        movies.add(new Movie("Dune: Part Two", R.drawable.dune, "Sci-Fi", "166 min", "https://www.youtube.com/watch?v=Way9Dexny3w", false));
+        movies.add(new Movie("Deadpool & Wolverine", R.drawable.dnw, "Action", "127 min", "https://www.youtube.com/watch?v=73_1biulkYk", false));
+        movies.add(new Movie("Joker: Folie à Deux", R.drawable.j, "Drama", "138 min", "https://www.youtube.com/watch?v=_OKAwz2MsJs", false));
 
         MovieAdapter adapter = new MovieAdapter(movies, new MovieAdapter.OnMovieClickListener() {
             @Override
