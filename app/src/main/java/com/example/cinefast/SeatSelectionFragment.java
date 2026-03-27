@@ -100,6 +100,8 @@ public class SeatSelectionFragment extends Fragment {
         int seatSize = (int) (40 * getResources().getDisplayMetrics().density); // 40dp
         int seatMargin = (int) (4 * getResources().getDisplayMetrics().density); // 4dp
 
+        boolean canHaveBooked = (selectedMovie != null && selectedMovie.isNowShowing());
+
         for (int i = 0; i < rows * cols; i++) {
             ImageView seat = new ImageView(getContext());
             GridLayout.LayoutParams params = new GridLayout.LayoutParams();
@@ -109,7 +111,8 @@ public class SeatSelectionFragment extends Fragment {
             seat.setLayoutParams(params);
             seat.setPadding(4, 4, 4, 4); // Internal padding for icons
             
-            if (Math.random() > 0.8) {
+            // For Coming Soon movies, all seats should be available (but disabled in onCreateView)
+            if (canHaveBooked && Math.random() > 0.8) {
                 seat.setImageResource(R.drawable.seat_booked_new);
                 seat.setTag("booked");
             } else {
