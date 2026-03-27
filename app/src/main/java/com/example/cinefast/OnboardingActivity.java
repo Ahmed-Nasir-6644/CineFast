@@ -17,7 +17,8 @@ public class OnboardingActivity extends AppCompatActivity {
         btnGetStarted.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(OnboardingActivity.this, HomeActivity.class);
+                // Navigate to MainActivity (the Fragment Host)
+                Intent intent = new Intent(OnboardingActivity.this, MainActivity.class);
                 startActivity(intent);
                 finish();
             }
