@@ -1,9 +1,12 @@
 package com.example.cinefast;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.PopupMenu;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
@@ -12,8 +15,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
-import android.content.Context;
-import android.content.SharedPreferences;
+import java.util.Locale;
 
 public class HomeFragment extends Fragment {
 
@@ -32,29 +34,42 @@ public class HomeFragment extends Fragment {
             else tab.setText("Coming Soon");
         }).attach();
 
-        view.findViewById(R.id.btnMenu).setOnClickListener(v -> showLastBooking());
+        view.findViewById(R.id.btnMenu).setOnClickListener(this::showPopupMenu);
 
         return view;
+    }
+
+    private void showPopupMenu(View view) {
+        PopupMenu popup = new PopupMenu(requireContext(), view);
+        popup.getMenu().add("View Last Booking");
+        popup.setOnMenuItemClickListener(item -> {
+            if (item.getTitle().equals("View Last Booking")) {
+                showLastBooking();
+                return true;
+            }
+            return false;
+        });
+        popup.show();
     }
 
     private void showLastBooking() {
         SharedPreferences prefs = requireContext().getSharedPreferences("CineFastPrefs", Context.MODE_PRIVATE);
         String movie = prefs.getString("last_movie", null);
+        
+        AlertDialog.Builder builder = new AlertDialog.Builder(requireContext());
+        builder.setTitle("Last Booking");
+
         if (movie == null) {
-            new AlertDialog.Builder(requireContext())
-                    .setTitle("Last Booking")
-                    .setMessage("No previous booking found.")
-                    .setPositiveButton("OK", null)
-                    .show();
+            builder.setMessage("No previous booking found.");
         } else {
             int seats = prefs.getInt("last_seats", 0);
             float price = prefs.getFloat("last_price", 0);
-            new AlertDialog.Builder(requireContext())
-                    .setTitle("Last Booking")
-                    .setMessage("Movie: " + movie + "\nSeats: " + seats + "\nTotal Price: $" + price)
-                    .setPositiveButton("OK", null)
-                    .show();
+            String message = String.format(Locale.US, "Movie: %s\nSeats: %d\nTotal Price: $%.2f", movie, seats, price);
+            builder.setMessage(message);
         }
+        
+        builder.setPositiveButton("OK", null);
+        builder.show();
     }
 
     private static class HomePagerAdapter extends FragmentStateAdapter {
