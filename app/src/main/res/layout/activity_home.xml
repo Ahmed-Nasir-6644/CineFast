@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CineFAST"
+            android:textColor="@color/red_accent"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Date"
+            android:textColor="@color/light_grey"
+            android:layout_marginTop="20dp"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/btnToday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Today"
+                android:textColor="@color/white"
+                android:background="@drawable/date_selected_bg"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:layout_marginEnd="10dp"/>
+
+            <TextView
+                android:id="@+id/btnTomorrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tomorrow"
+                android:textColor="@color/light_grey"
+                android:background="@drawable/date_unselected_bg"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Now Showing"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="15dp"/>
+
+        <!-- Movie Card 1 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/movie_card_bg"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_vertical">
+
+            <RelativeLayout
+                android:layout_width="80dp"
+                android:layout_height="110dp">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/dnk"
+                    android:scaleType="centerCrop"
+                    android:background="@color/grey"/>
+                <ImageView
+                    android:id="@+id/btnTrailerDarkKnight"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerInParent="true"
+                    android:src="@android:drawable/ic_media_play"
+                    android:background="@drawable/circle_white_bg"
+                    android:padding="4dp"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="The Dark Knight"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Action / 152 min"
+                    android:textColor="@color/light_grey"
+                    android:textSize="14sp"
+                    android:layout_marginTop="4dp" />
+
+                <Button
+                    android:id="@+id/btnBookDarkKnight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="Book Seats"
+                    android:textSize="12sp"
+                    android:backgroundTint="@color/red_accent"
+                    android:layout_marginTop="12dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:textAllCaps="false"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Movie Card 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/movie_card_bg"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_vertical">
+
+            <RelativeLayout
+                android:layout_width="80dp"
+                android:layout_height="110dp">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic"
+                    android:scaleType="centerCrop"
+                    android:background="@color/grey"/>
+                <ImageView
+                    android:id="@+id/btnTrailerInception"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerInParent="true"
+                    android:src="@android:drawable/ic_media_play"
+                    android:background="@drawable/circle_white_bg"
+                    android:padding="4dp"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Inception"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sci-Fi / 148 min"
+                    android:textColor="@color/light_grey"
+                    android:textSize="14sp"
+                    android:layout_marginTop="4dp" />
+
+                <Button
+                    android:id="@+id/btnBookInception"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="Book Seats"
+                    android:textSize="12sp"
+                    android:backgroundTint="@color/red_accent"
+                    android:layout_marginTop="12dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:textAllCaps="false"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Movie Card 3 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/movie_card_bg"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_vertical">
+
+            <RelativeLayout
+                android:layout_width="80dp"
+                android:layout_height="110dp">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/is"
+                    android:scaleType="centerCrop"
+                    android:background="@color/grey"/>
+                <ImageView
+                    android:id="@+id/btnTrailerInterstellar"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerInParent="true"
+                    android:src="@android:drawable/ic_media_play"
+                    android:background="@drawable/circle_white_bg"
+                    android:padding="4dp"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Interstellar"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sci-Fi / 169 min"
+                    android:textColor="@color/light_grey"
+                    android:textSize="14sp"
+                    android:layout_marginTop="4dp" />
+
+                <Button
+                    android:id="@+id/btnBookInterstellar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="Book Seats"
+                    android:textSize="12sp"
+                    android:backgroundTint="@color/red_accent"
+                    android:layout_marginTop="12dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:textAllCaps="false"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

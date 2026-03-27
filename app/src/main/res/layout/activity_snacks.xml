@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CineFAST"
+        android:textColor="@color/red_accent"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Items"
+        android:textColor="@color/light_grey"
+        android:layout_marginTop="20dp"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Snacks &amp; Drinks"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="20dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Item 1: Popcorn -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/movie_card_bg"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/popcorn"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/snack_popcorn_bg"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Popcorn"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Large / Buttered"
+                        android:textColor="@color/light_grey"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$8.99"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:layout_marginTop="4dp"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="8dp">
+                        <Button
+                            android:id="@+id/btnMinus1"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:text="-"
+                            android:padding="0dp"
+                            android:backgroundTint="@color/grey"/>
+                        <TextView
+                            android:id="@+id/tvQty1"
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:gravity="center"
+                            android:textSize="16sp"
+                            android:textStyle="bold"/>
+                        <Button
+                            android:id="@+id/btnPlus1"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:text="+"
+                            android:padding="0dp"
+                            android:backgroundTint="@color/red_accent"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Item 2: Nachos -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/movie_card_bg"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/nacho"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/snack_nachos_bg"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nachos"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="With Cheese Dip"
+                        android:textColor="@color/light_grey"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$7.99"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:layout_marginTop="4dp"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="8dp">
+                        <Button
+                            android:id="@+id/btnMinus2"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:text="-"
+                            android:padding="0dp"
+                            android:backgroundTint="@color/grey"/>
+                        <TextView
+                            android:id="@+id/tvQty2"
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:gravity="center"
+                            android:textSize="16sp"
+                            android:textStyle="bold"/>
+                        <Button
+                            android:id="@+id/btnPlus2"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:text="+"
+                            android:padding="0dp"
+                            android:backgroundTint="@color/red_accent"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Item 3: Soft Drink -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/movie_card_bg"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/pepsi"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/snack_drink_bg"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Soft Drink"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Large / Any Flavor"
+                        android:textColor="@color/light_grey"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$5.99"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:layout_marginTop="4dp"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="8dp">
+                        <Button
+                            android:id="@+id/btnMinus3"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:text="-"
+                            android:padding="0dp"
+                            android:backgroundTint="@color/grey"/>
+                        <TextView
+                            android:id="@+id/tvQty3"
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:gravity="center"
+                            android:textSize="16sp"
+                            android:textStyle="bold"/>
+                        <Button
+                            android:id="@+id/btnPlus3"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:text="+"
+                            android:padding="0dp"
+                            android:backgroundTint="@color/red_accent"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Item 4: Candy Mix -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/movie_card_bg"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/candy"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/snack_candy_bg"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Candy Mix"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Assorted Candies"
+                        android:textColor="@color/light_grey"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$6.99"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:layout_marginTop="4dp"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="8dp">
+                        <Button
+                            android:id="@+id/btnMinus4"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:text="-"
+                            android:padding="0dp"
+                            android:backgroundTint="@color/grey"/>
+                        <TextView
+                            android:id="@+id/tvQty4"
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:gravity="center"
+                            android:textSize="16sp"
+                            android:textStyle="bold"/>
+                        <Button
+                            android:id="@+id/btnPlus4"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:text="+"
+                            android:padding="0dp"
+                            android:backgroundTint="@color/red_accent"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnConfirmSnacks"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Confirm"
+        android:backgroundTint="@color/red_accent"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"/>
+
+</LinearLayout>

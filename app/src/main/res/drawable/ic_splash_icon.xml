@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- This ensures the logo stays within the 160dp "safe zone" of the circular splash mask -->
+    <item
+        android:drawable="@drawable/splash"
+        android:width="160dp"
+        android:height="160dp"
+        android:gravity="center" />
+</layer-list>
